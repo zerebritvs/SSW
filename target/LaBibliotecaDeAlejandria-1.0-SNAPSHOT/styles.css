@@ -1,0 +1,604 @@
+
+html{
+    height: 100%;
+}
+
+body {
+    background: rgb(84, 122, 202);
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/*Navegacion*/
+.navMain {
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 20px 0;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.bannerLogo{
+    width: 400px;
+}
+
+.filtros{
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Check Boxes */
+.box select {
+    background-color: rgb(0, 26, 35, 0.7);
+    color: white;
+    padding: 12px;
+    width: 100%;
+    font-size: 100%;
+    border-radius: 10px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.box option {
+    background-color: #063969;
+    border: 0px;
+}
+
+.buscarOrdenar{
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ordenar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+#icono{
+    width: 25px;
+    margin-right: 10px;
+}
+
+#iconoFiltro{
+    width: 25px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+/*Formulario estilo*/
+
+#info-box{
+    background: rgb(0, 26, 35, 0.8);
+    color: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 0px 30px;
+}
+
+#info-box .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+  
+#info-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    color: #F6BD60;
+}
+
+
+#info-box label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+  
+#info-box input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+  
+#info-box input[type="text"], #info-box input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+  
+#info-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #F56960;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+  
+#info-box input[type="submit"]:hover {
+    cursor: pointer;
+    background: #F6BD60;
+    color: #000;
+}
+  
+#info-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+
+}
+  
+#info-box a:hover {
+    color: #fff;
+}
+
+.content-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+
+/*Iniciar Sesión */
+.login-box {
+    width: 320px;
+    height: 380px;
+    
+}
+
+/*Registrarse */
+.registrar-box {
+    width: 320px;
+    height: 510px;
+}
+
+/*Subir Archivos */
+.subir-box {
+    width: 500px;
+    height: 750px;
+}
+
+#info-box #uploadBtn {
+    margin-top: 15px;
+}
+
+.login-box h1 {
+    position: relative;
+    top: -45px;
+}
+
+.login-box form {
+    position: relative;
+    top: -50px;
+}
+
+.registrar-box h1 {
+    position: relative;
+    top: -45px;
+}
+
+.registrar-box form {
+    position: relative;
+    top: -50px;
+}
+
+.subir-box h1 {
+    position: relative;
+    top: 20px;
+}
+
+.subir-box form {
+    position: relative;
+    top: 10px;
+}
+
+/* Dropdown Button */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-right: 50px;
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+  
+/* Contenido del Dropdown*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #001A23;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+  
+/* Enlaces dentro del Dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+/* Cambia el color de los enlaces desplegables al pasar el reton */
+.dropdown-content a:hover {
+    background-color: rgb(100, 100, 100, 0.5);
+    border-radius: 5px;
+}
+  
+/* Mostrar el Dropdown al pasar el raton */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Sidebar*/
+.sideNav {
+    height: 100%;
+    width: 0; /*Se cambia desde el JS*/
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #072864;
+    overflow-x: hidden; /* Deshabilita el scroll horizontal */
+    padding-top: 60px;
+    transition: 0.5s;
+}
+  
+/* Enlaces del sidebar */
+.sideNav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #b1b1b1;
+    display: block;
+    transition: 0.3s;
+}
+
+.sideNav a:hover {
+    color: #ffffff;
+}
+  
+/* Posicion y estilo del boton de cerrar*/
+.sideNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sideNav ul{
+    display: none;
+    color: #eee;
+}
+
+.menu-sidebar {
+    cursor: pointer;
+    width: 50px;
+}
+
+/*Barra de busqueda*/
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border-bottom: 3px solid #000000;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-top: none;
+    border-left: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    background: transparent;
+}
+
+.searchTerm:focus{
+    color: #000000;
+}
+.searchTerm::placeholder{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.wrap{
+      width: 50%;
+}
+
+.area-subir{    
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/*Tabla de archivos*/
+.tabla-resultados{
+    border-collapse: collapse;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+    
+.tabla-resultados tr {
+      background-color: rgb(144, 176, 219);
+      height: 50px;
+      border-radius: 10px;
+      border-bottom: 2px solid rgb(84, 122, 202);
+}
+
+.tabla-resultados td {
+    padding-left: 10px;
+}
+    
+.tabla-resultados tr:hover{
+    background: #ddd;
+    cursor: pointer;
+}
+
+.visualizarArea {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.descripcion-box {
+    width: 40%;
+    height: fit-content(400px);  
+    background-color: #001A23;   
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.descripcion-box h1 {
+    text-align: left;
+    color: #F6BD60;
+}
+
+.descripcion-box label {
+    color: white;   
+}
+
+.tags {
+    list-style: none;
+    margin: 0;
+    overflow: hidden; 
+    padding: 0;
+}
+  
+.tags li {
+    float: left; 
+}
+  
+.tag {
+    background: #eee;
+    border-radius: 3px;
+    color: #999;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 20px 0 23px;
+    position: relative;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+}
+
+.preview-box {
+    width: 50%;
+    height: 500px;
+    border: solid 2px grey;
+    border-radius: 5px;
+}
+
+.preview-box iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.comentarios {
+    width: 90%;
+    box-sizing: border-box;
+    align-items: center;
+    
+}
+.comentarios table {
+    border-collapse: collapse;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.comentarios tr{
+    background-color: rgb(144, 176, 219);
+    border-bottom: 2px solid rgb(84, 122, 202);
+    line-height: 40px;
+}
+
+.comentarios td{
+  padding-left: 10px;
+}
+
+.comentariosHead {
+    background-color: #072864;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.comentariosHead button {
+    border-radius: 5px;
+    height: 30px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.comentariosHead label{
+  color: white;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(71, 78, 93, 0.4);
+    padding-top: 50px;
+}
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 50%;
+    height: 30%;
+    border-radius: 5px;
+}
+
+.modal textarea{
+    max-height: 120px;
+    height: 100px;
+    width: 100%;
+    resize: none;
+}
+
+.buttonsComentario {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttonsComentario button {
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+}
+
+
+ /* download button */
+.btn-download {
+    margin-top: 20px;
+    background-color: whitesmoke;
+    border: none;
+    color: black;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn-download:hover {
+    background-color: orange;
+}
+
+.fila-fav {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+ /* fav button */
+.btn-fav {
+    margin-top: 20px;
+    background-color: whitesmoke;
+    border: none;
+    color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+/* Darker background on mouse-over */
+.btn-fav:hover {
+    background-color: yellow;
+}
+
+ /* fav-ya button */
+.btn-fav-ya {
+    margin-top: 20px;
+    background-color: yellow;
+    border: none;
+    color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+/* Darker background on mouse-over */
+.btn-fav-ya:hover {
+    background-color: whitesmoke;
+}
+
+
+
+
+
+
+

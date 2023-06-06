@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Alejandría</title>
+
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navMain">
+          <div id="sideNavMenu" class="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="Favoritos.jsp">Favoritos ★</a>
+            <a href="SubirArchivo.html">Subir Archivos</a>
+            <a href="#">Ajustes</a>
+          </div>
+          <span onclick="openNav()"><img src="img/menuLogo.png"  class="menu-sidebar"></span>
+        <ul class="navBanner">
+          <a href="MainPage.jsp"><img src="img/Logo.png" class= "bannerLogo" alt="Logo Imagen"></a>
+        </ul>
+            <ul class="navLogIn">
+              <div class="dropdown">
+                <button class="dropbtn"><img src="img/logoInicioSesion.png" width="50px"></button>
+                <div class="dropdown-content">
+                  
+                        <a href="InicioSesionServlet?parametro=0">Cerrar sesión</a>  
+                        <a href="InicioSesionServlet?parametro=1">Cambiar cuenta</a>
+                         
+                </div>
+            </div>
+            </ul>    
+        </nav>
+        
+        <div class="area-subir">
+          <form action="SubirArchivoServlet" method="post" enctype="multipart/form-data">
+            <div class="subir-box" id="info-box">
+                <h1>Subir archivo</h1>
+
+                  <!-- TITULO INPUT -->
+                  <label for="titulo">Título</label>
+                  <input type="text" name="nombre" placeholder="Introduce el título">
+                  <!-- UNIVERSIDAD INPUT -->
+                  <label for="universidad">Universidad</label>
+                  <input type="text" name="universidad" placeholder="Introduce nombre de la universidad">
+                  <!-- GRADO INPUT -->
+                  <label for="grado">Grado</label>
+                  <input type="text" name="grado" placeholder="Introduce el grado">
+                  <!-- CURSO INPUT -->
+                  <label for="curso">Curso</label>
+                  <input type="text" name="curso" placeholder="Introduce el curso">
+                  <!-- CUATRI INPUT -->
+                  <label for="cuatri">Cuatrimestre</label>
+                  <input type="text" name="cuatrimestre" placeholder="Introduce el cuatrimestre">               
+                  <!-- ASIGNATURA INPUT -->
+                  <label for="asignatura">Asignatura</label>
+                  <input type="text" name="asignatura" placeholder="Introduce la asignatura">
+                  <!-- DESCRIPCION INPUT -->
+                  <label for="descripción">Descripción</label>
+                  <input type="text" name="descripcion" placeholder="Introduce la descripción">
+                  <!-- FILE INPUT -->
+                  <label for="archivo">Seleccionar Archivo</label>
+                  <input id="uploadBtn" type="file" name="archivo"/>
+                  <!-- SUBMIT INPUT -->
+                  <input type="submit" value="Subir Archivo">
+
+
+              </div>
+            </form>
+        </div>
+        
+    </div>
+    <!--CUSTOM JS-->
+    <script>
+
+    /*Funcionalidad de SideBar */
+    function openNav() {
+      document.getElementById("sideNavMenu").style.width = "250px";
+    }
+
+    /*Pone el width = 0 del sidebar*/
+    function closeNav() {
+      document.getElementById("sideNavMenu").style.width = "0";
+    }
+
+    
+    </script>
+</body>

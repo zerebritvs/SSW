@@ -1,0 +1,11 @@
+modelo\ComentarioDB.class
+modelo\Favorito.class
+control\AddFavoritoServlet.class
+modelo\TagTree.class
+modelo\FavoritoDB.class
+control\FiltrarBusquedaServlet.class
+control\ObtenerArchivoServlet.class
+control\VisualizarArchivoServlet.class
+modelo\Comentario.class
+modelo\TagTreeDB.class
+control\AddComentarioServlet.class

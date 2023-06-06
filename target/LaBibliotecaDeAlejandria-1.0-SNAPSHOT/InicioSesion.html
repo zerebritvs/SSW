@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Alejandría</title>
+
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+    <div class="container">
+        <nav class="navMain">
+          <ul></ul>
+          <ul class="navBanner">
+            <a href="MainPage.jsp"><img src="img/Logo.png" class= "bannerLogo" alt="Logo Image"></a>
+          </ul>
+          <ul></ul>    
+        </nav>
+        <div class="content-box">
+          <div class="login-box" id="info-box">
+            <img src="img/logoInicioSesion.png" class="avatar" alt="Avatar Image">
+            <h1>Iniciar Sesión</h1>
+            <form action="InicioSesionServlet" method="post">
+              <!-- USERNAME INPUT -->
+              <label for="username">Nombre de usuario</label>
+              <input type="text" name="username" placeholder="Introduce nombre de usuario">
+              <!-- PASSWORD INPUT -->
+              <label for="password">Contraseña</label>
+              <input type="password" name="password" placeholder="Introduce contraseña">
+              <input type="submit" value="Iniciar Sesión">
+              <a href="#">Olvide la contraseña</a><br>
+              <a href="Registro.html">Aún no tengo cuenta</a>
+            </form>
+          </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
